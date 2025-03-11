@@ -524,7 +524,7 @@ function parse_LogFile(txt, time) {
             MotorCurrents.push(values[2]);
             BatteryCurrents.push(values[3]);
             DutyCycles.push(values[4]);
-            Speeds.push(values[5]);
+            Speeds.push(values[5] * 3.6);
             InpVoltages.push(values[6]);
             AmpHours.push(values[7]);
             AmpHoursCharged.push(values[8]);
@@ -536,7 +536,7 @@ function parse_LogFile(txt, time) {
             TimePassedInMss.push(values[14]);
             latlngs.push([values[15], values[16]]);
             Altitudes.push(values[17]);
-            GPSSpeeds.push(values[18]);
+            GPSSpeeds.push(values[18] * 3.6);
           } else {
             console.log("found invalid data:\n" + lines[i])
           }
